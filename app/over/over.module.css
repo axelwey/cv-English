@@ -1,0 +1,209 @@
+.over {
+  min-height: 100vh;
+  padding: 140px 80px 120px;
+  background: #050b18;
+  color: white;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.timelineSection {
+  max-width: 900px;
+  margin: 0 auto 120px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #f5f0e6,
+    #d6c48f
+  );
+}
+
+.year {
+  min-width: 120px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.content h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.content p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.projectsSection {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.projectCard {
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(10, 20, 40, 0.65);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.projectCard h3 {
+  margin: 0 0 12px;
+}
+
+.projectCard p {
+  margin: 0 0 20px;
+  opacity: 0.85;
+}
+
+.projectCard a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.projectCard a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.2),
+    #f5f0e6,
+    #d6c48f
+  );
+}
+
+.github {
+  margin-top: 20px;
+}
+
+.github a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.github a:hover {
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .over {
+    padding: 120px 40px 100px;
+  }
+
+  .timelineSection {
+    max-width: 100%;
+  }
+
+  .projectsSection {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .over {
+    padding: 110px 20px 80px; /* <-- belangrijkste fix */
+  }
+
+  .title {
+    font-size: 34px;
+    margin-bottom: 36px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    margin-bottom: 22px;
+  }
+
+  /* timeline minder “links” zodat het past */
+  .timeline {
+    padding-left: 22px;
+  }
+
+  .timeline::before {
+    left: 6px;
+  }
+
+  .item {
+    flex-direction: column; /* jaar boven content */
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .item::before {
+    left: -28px;
+  }
+
+  .year {
+    min-width: 0;           /* <-- fix voor overflow */
+    font-size: 13px;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+
+  /* projecten: altijd 1 kolom op gsm */
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .projectCard {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}

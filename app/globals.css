@@ -1,0 +1,225 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #050b18;
+  color: white;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* canvas */
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* atmosphere (LICHTER) */
+/* atmosphere (LICHTER) */
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at top, rgba(255,255,255,0.08), transparent 70%),
+    linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+}
+
+
+/* CV wrapper */
+.cv {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* CV sections: start onzichtbaar -> GSAP maakt zichtbaar */
+.cv-section {
+  position: absolute;
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+  padding: 24px;
+}
+
+/* plaatsing 4 hoeken */
+.cv-top-left {
+  top: 80px;
+  left: 4%;
+}
+
+.cv-top-right {
+  top: 80px;
+  right: 4%;
+  text-align: right;
+}
+
+.cv-bottom-left {
+  top: 60%;
+  left: 4%;
+}
+
+.cv-bottom-right {
+  top: 60%;
+  right: 4%;
+  text-align: right;
+}
+
+.sticky-title {
+  margin: 0 0 10px 0;
+  font-size: 52px;
+  line-height: 1;
+  opacity: 0.95;
+}
+
+.cv-section p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+/* end menu */
+.end-menu {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.9;
+  z-index: 4;
+  pointer-events: auto;
+  
+}
+
+.end-menu__nav {
+  display: flex;
+  gap: 32px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: rgba(10, 20, 40, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  animation: menuGradientMove 25s linear infinite;
+}
+
+.end-menu__nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.end-menu__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.end-menu__nav a:hover::after {
+  width: 100%;
+}
+
+/* scroll hint */
+.scroll-hint {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  z-index: 4;
+  pointer-events: none;
+
+  /* 👇 dit is de magie */
+  animation: scrollHintPulse 3s ease-in-out 10,
+             scrollHintFadeOut 3s ease forwards;
+  animation-delay: 0s, 5s;
+}
+
+@keyframes scrollHintPulse {
+  0%   { opacity: 0.2; }
+  50%  { opacity: 0.8; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes scrollHintFadeOut {
+  from { opacity: 0.2; }
+  to   { opacity: 0; visibility: hidden; }
+}
+
+
+.scroll-hint__line {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 8px auto 0;
+}
+
+@keyframes fadePulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+/* ===============================
+   CLEAN MOVING GRADIENT BORDER
+================================ */
+
+.end-menu__nav {
+  position: relative;
+  border-radius: 999px;
+  padding: 14px 32px;
+  background:
+    linear-gradient(
+      rgba(10, 20, 40, 0.65),
+      rgba(10, 20, 40, 0.65)
+    ) padding-box,
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.2),
+      #f5f0e6,
+      #d6c48f,
+      #f5f0e6,
+      rgba(255,255,255,0.2)
+    ) border-box;
+
+  border: 1px solid transparent;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+  background-size: 100% 100%, 300% 300%;
+  background-position: center, 0% 50%;
+
+  transition: background-position 0.3s ease;
+}
+
+/* actief = kleur beweegt */
+
+
+@keyframes menuGradientMove {
+  from {
+    background-position: center, 0% 50%;
+  }
+  to {
+    background-position: center, 300% 50%;
+  }
+}

@@ -1,0 +1,44 @@
+"use client"; 
+// We veranderen layout naar een client component om de LanguageContext direct te kunnen lezen voor de lang-attribuut
+
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import EndMenu from "./components/EndMenu";
+import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import LanguageToggle from "./components/LanguageToggle";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+// Een kleine wrapper om de taal in de <html> tag te krijgen
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const { language } = useLanguage();
+  return (
+    <html lang={language}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <EndMenu />
+        <LanguageToggle />
+        {children}
+      </body>
+    </html>
+  );
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <LanguageProvider>
+      <LayoutContent>{children}</LayoutContent>
+    </LanguageProvider>
+  );
+}
