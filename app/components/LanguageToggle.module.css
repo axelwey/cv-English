@@ -47,7 +47,7 @@
 /* GSM SPECIFIEKE AANPASSING */
 @media (max-width: 768px) {
   .wrapper {
-    top: 20px;
+    top: 15px;
     right: 20px;
   }
 }
