@@ -3,72 +3,162 @@
     {
       "id": "tl-1",
       "order": 0,
-      "year": { "nl": "2006", "en": "2006" },
-      "title": { "nl": "Geboren", "en": "Born" },
-      "desc": { "nl": "", "en": "" }
+      "year": {
+        "nl": "2006",
+        "en": "2006"
+      },
+      "title": {
+        "nl": "Geboren",
+        "en": "Born"
+      },
+      "desc": {
+        "nl": "",
+        "en": ""
+      }
     },
     {
       "id": "tl-2",
       "order": 1,
-      "year": { "nl": "2021 – 2024", "en": "2021 – 2024" },
-      "title": { "nl": "Studie Elektriciteit – Elektronica", "en": "Study Electricity – Electronics" },
-      "desc": { "nl": "Middelbaar onderwijs met focus op technische basis en praktijk.", "en": "Secondary education focused on technical basics and practice." }
+      "year": {
+        "nl": "2021 – 2024",
+        "en": "2021 – 2024"
+      },
+      "title": {
+        "nl": "Studie Elektriciteit – Elektronica",
+        "en": "Study Electricity – Electronics"
+      },
+      "desc": {
+        "nl": "Middelbaar onderwijs met focus op technische basis en praktijk.",
+        "en": "Secondary education focused on technical basics and practice."
+      }
     },
     {
       "id": "tl-3",
       "order": 2,
-      "year": { "nl": "2021 – 2025", "en": "2021 – 2025" },
-      "title": { "nl": "Assistent Tuinonderhoud — Project T²", "en": "Garden Maintenance Assistant — Project T²" },
-      "desc": { "nl": "Terugkerende zomerjob binnen tuin- en onderhoudswerken.", "en": "Recurring summer job in garden and maintenance work." }
+      "year": {
+        "nl": "2021 – 2025",
+        "en": "2021 – 2025"
+      },
+      "title": {
+        "nl": "Assistent Tuinonderhoud - Project T²",
+        "en": "Garden Maintenance Assistant — Project T²"
+      },
+      "desc": {
+        "nl": "Terugkerende zomerjob binnen tuin- en onderhoudswerken.",
+        "en": "Recurring summer job in garden and maintenance work."
+      }
     },
     {
       "id": "tl-4",
       "order": 3,
-      "year": { "nl": "Zomer 2021", "en": "Summer 2021" },
-      "title": { "nl": "Ijsschepper — Ijsbieke", "en": "Ice Cream Server — Ijsbieke" },
-      "desc": { "nl": "Weekend- en seizoenswerk met focus op klantenservice en tempo.", "en": "Weekend and seasonal work focused on customer service and pace." }
+      "year": {
+        "nl": "Zomer 2021",
+        "en": "Summer 2021"
+      },
+      "title": {
+        "nl": "Ijsschepper - Ijsbieke",
+        "en": "Ice Cream Server — Ijsbieke"
+      },
+      "desc": {
+        "nl": "Weekend- en seizoenswerk met focus op klantenservice en tempo.",
+        "en": "Weekend and seasonal work focused on customer service and pace."
+      }
     },
     {
       "id": "tl-5",
       "order": 4,
-      "year": { "nl": "Zomer 2022", "en": "Summer 2022" },
-      "title": { "nl": "Productie Operator — Kemin Industries", "en": "Production Operator — Kemin Industries" },
-      "desc": { "nl": "Werken in een industriële productieomgeving met procesgerichte taken.", "en": "Working in an industrial production environment with process-oriented tasks." }
+      "year": {
+        "nl": "Zomer 2022",
+        "en": "Summer 2022"
+      },
+      "title": {
+        "nl": "Productie Operator - Kemin Industries",
+        "en": "Production Operator — Kemin Industries"
+      },
+      "desc": {
+        "nl": "Werken in een industriële productieomgeving met procesgerichte taken.",
+        "en": "Working in an industrial production environment with process-oriented tasks."
+      }
     },
     {
       "id": "tl-6",
       "order": 5,
-      "year": { "nl": "Zomer 2023", "en": "Summer 2023" },
-      "title": { "nl": "Assistent Airco-installatie — Maes Industries", "en": "Air Conditioning Installation Assistant — Maes Industries" },
-      "desc": { "nl": "Ondersteuning bij installaties in een technische werkomgeving.", "en": "Support with installations in a technical work environment." }
+      "year": {
+        "nl": "Zomer 2023",
+        "en": "Summer 2023"
+      },
+      "title": {
+        "nl": "Assistent Airco-installatie - Maes Industries",
+        "en": "Air Conditioning Installation Assistant — Maes Industries"
+      },
+      "desc": {
+        "nl": "Ondersteuning bij installaties in een technische werkomgeving.",
+        "en": "Support with installations in a technical work environment."
+      }
     },
     {
       "id": "tl-7",
       "order": 6,
-      "year": { "nl": "Zomer 2024", "en": "Summer 2024" },
-      "title": { "nl": "Inpakker & Administratie — Biscuiterie Thijs", "en": "Packer & Administration — Biscuiterie Thijs" },
-      "desc": { "nl": "Combinatie van uitvoerend werk en administratieve ondersteuning.", "en": "Combination of operational work and administrative support." }
+      "year": {
+        "nl": "Zomer 2024",
+        "en": "Summer 2024"
+      },
+      "title": {
+        "nl": "Inpakker & Administratie - Biscuiterie Thijs",
+        "en": "Packer & Administration — Biscuiterie Thijs"
+      },
+      "desc": {
+        "nl": "Combinatie van uitvoerend werk en administratieve ondersteuning.",
+        "en": "Combination of operational work and administrative support."
+      }
     },
     {
       "id": "tl-8",
       "order": 7,
-      "year": { "nl": "2024 – heden", "en": "2024 – present" },
-      "title": { "nl": "Studie IT & Cloud & Cybersecurity", "en": "Study IT & Cloud & Cybersecurity" },
-      "desc": { "nl": "Opleiding met focus op infrastructuur, cloud, DevOps en cybersecurity.", "en": "Education focusing on infrastructure, cloud, DevOps, and cybersecurity." }
+      "year": {
+        "nl": "2024 – heden",
+        "en": "2024 – present"
+      },
+      "title": {
+        "nl": "Studie IT & Cloud & Cybersecurity",
+        "en": "Study IT & Cloud & Cybersecurity"
+      },
+      "desc": {
+        "nl": "Opleiding met focus op infrastructuur, cloud, DevOps en cybersecurity.",
+        "en": "Education focusing on infrastructure, cloud, DevOps, and cybersecurity."
+      }
     },
     {
       "id": "tl-9",
       "order": 8,
-      "year": { "nl": "Sep 2024 – heden", "en": "Sep 2024 – present" },
-      "title": { "nl": "Keukenmedewerker — Link21", "en": "Kitchen Assistant — Link21" },
-      "desc": { "nl": "Werken in professionele keukenomgeving in combinatie met studies.", "en": "Working in a professional kitchen environment combined with studies." }
+      "year": {
+        "nl": "Sep 2024 – heden",
+        "en": "Sep 2024 – present"
+      },
+      "title": {
+        "nl": "Keukenmedewerker - Link21",
+        "en": "Kitchen Assistant — Link21"
+      },
+      "desc": {
+        "nl": "Werken in professionele keukenomgeving in combinatie met studies.",
+        "en": "Working in a professional kitchen environment combined with studies."
+      }
     },
     {
       "id": "tl-10",
       "order": 9,
-      "year": { "nl": "Zomer 2025", "en": "Summer 2025" },
-      "title": { "nl": "Podiumbouwer — 360 EVENTS", "en": "Stage Builder — 360 EVENTS" },
-      "desc": { "nl": "Opbouw en afbraak van podiumstructuren op grootschalige evenementen (Tomorrowland, Gentse Feesten, Dominator). Verplicht behalen van VCA VOL-certificaat.", "en": "Assembly and disassembly of stage structures at large-scale events (Tomorrowland, Gentse Feesten, Dominator). Mandatory VCA VOL certificate." }
+      "year": {
+        "nl": "Zomer 2025",
+        "en": "Summer 2025"
+      },
+      "title": {
+        "nl": "Podiumbouwer - 360 EVENTS",
+        "en": "Stage Builder — 360 EVENTS"
+      },
+      "desc": {
+        "nl": "Opbouw en afbraak van podiumstructuren op grootschalige evenementen (Tomorrowland, Gentse Feesten, Dominator). Verplicht behalen van VCA VOL-certificaat.",
+        "en": "Assembly and disassembly of stage structures at large-scale events (Tomorrowland, Gentse Feesten, Dominator). Mandatory VCA VOL certificate."
+      }
     }
   ]
 }
