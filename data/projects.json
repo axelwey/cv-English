@@ -1,0 +1,19 @@
+{
+  "githubUrl": "https://github.com/axelwey",
+  "items": [
+    {
+      "id": "proj-1",
+      "order": 0,
+      "title": { "nl": "SD-WAN naar Full SASE", "en": "SD-WAN to Full SASE" },
+      "desc": { "nl": "Technisch ontwerpproject rond de migratie van een klassiek SD-WAN-netwerk naar een volledige SASE-architectuur.", "en": "Technical design project regarding the migration from a traditional SD-WAN network to a full SASE architecture." },
+      "file": "sdwan-sase.pdf"
+    },
+    {
+      "id": "proj-2",
+      "order": 1,
+      "title": { "nl": "Startup naar Full Cloud (virtueel)", "en": "Startup to Full Cloud (virtual)" },
+      "desc": { "nl": "Virtueel project waarbij een cloud-native infrastructuur werd ontworpen voor een fictieve startupomgeving.", "en": "Virtual project designing a cloud-native infrastructure for a fictional startup environment." },
+      "file": "startup-cloud.pdf"
+    }
+  ]
+}

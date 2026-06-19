@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import EndMenu from "./components/EndMenu";
-import { LanguageProvider } from "./context/LanguageContext";
-import LanguageToggle from "./components/LanguageToggle";
+import SiteChrome from "./components/SiteChrome";
 import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
@@ -19,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Axel Weyers",
   description: "IT & Cloud & Cybersecurity Student",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
@@ -31,11 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LanguageProvider>
-          <EndMenu />
-          <LanguageToggle />
-          {children}
-        </LanguageProvider>
+        <SiteChrome>{children}</SiteChrome>
 
         <Analytics />
       </body>

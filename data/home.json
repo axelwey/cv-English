@@ -1,0 +1,41 @@
+{
+  "heroTitle": "Axel Weyers",
+  "blocks": [
+    {
+      "id": "block-1",
+      "order": 0,
+      "title": { "nl": "Profiel", "en": "Profile" },
+      "text": {
+        "nl": "Gemotiveerde bachelorstudent Elektronica-ICT (IT, Cybersecurity & Cloud) met een brede technische basis en sterke interesse in moderne IT-oplossingen.",
+        "en": "Motivated Bachelor's student in Electronics-ICT (IT, Cybersecurity & Cloud) with a broad technical foundation and a strong interest in modern IT solutions."
+      }
+    },
+    {
+      "id": "block-2",
+      "order": 1,
+      "title": { "nl": "Kennis", "en": "Knowledge" },
+      "text": {
+        "nl": "Sterke basis in softwareontwikkeling, webtechnologieën en backend-ontwikkeling, aangevuld met kennis van automatisatie, CI/CD, virtualisatie en fundamentele cybersecurity-principes.",
+        "en": "Strong foundation in software development, web technologies and backend development, complemented by knowledge of automation, CI/CD, virtualization and fundamental cybersecurity principles."
+      }
+    },
+    {
+      "id": "block-3",
+      "order": 2,
+      "title": { "nl": "Ervaring", "en": "Experience" },
+      "text": {
+        "nl": "Praktijkervaring opgebouwd binnen de opleiding via labo’s en opdrachten waarin softwareontwikkeling, cloud- en securityconcepten gecombineerd werden.",
+        "en": "Practical experience gained through labs and projects combining software development, cloud technologies and security concepts."
+      }
+    },
+    {
+      "id": "block-4",
+      "order": 3,
+      "title": { "nl": "Ambitie", "en": "Ambition" },
+      "text": {
+        "nl": "Technische kennis verder verdiepen en uitgroeien tot een sterke IT-professional in cloud en cybersecurity.",
+        "en": "To further deepen technical expertise and grow into a strong IT professional specializing in cloud and cybersecurity."
+      }
+    }
+  ]
+}
