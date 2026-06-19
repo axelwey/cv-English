@@ -26,6 +26,58 @@
         "en": "Virtual project designing a cloud-native infrastructure for a fictional startup environment."
       },
       "file": "startup-cloud.pdf"
+    },
+    {
+      "id": "66354008-2172-4b1b-898c-f4746342d2bc",
+      "order": 2,
+      "title": {
+        "nl": "Smart Cane",
+        "en": "Smart Cane"
+      },
+      "desc": {
+        "nl": "Een assistieve wandelstok voor visueel beperkten met obstacle detection, YOLOv8n AI-objectherkenning en een Android-begeleidapp via BLE 5.0. Stack: Raspberry Pi 5, Python, Kotlin, Mapbox, pico2wave. ",
+        "en": "An assistive cane for the visually impaired featuring obstacle detection, YOLOv8n AI recognition, and an Android companion app over BLE 5.0. Stack: Raspberry Pi 5, Python, Kotlin, Mapbox, pico2wave."
+      },
+      "file": ""
+    },
+    {
+      "id": "4be85d66-4e9e-48c2-afff-5a7e0d82f522",
+      "order": 3,
+      "title": {
+        "nl": "Ansible Nextcloud IaC",
+        "en": "Ansible Nextcloud IaC"
+      },
+      "desc": {
+        "nl": "Idempotente, volledige automatisering van een productieklare Nextcloud-installatie op Rocky Linux 10 met ingebakken security (SELinux, Ansible Vault, TLS, firewalld) en een GitHub Actions CI/CD-pipeline.",
+        "en": "Idempotent, fully automated deployment of a production-ready Nextcloud instance on Rocky Linux 10 with built-in security hardening and a GitHub Actions CI/CD pipeline."
+      },
+      "file": ""
+    },
+    {
+      "id": "fca7c182-988e-4bae-811a-6edf60204a36",
+      "order": 4,
+      "title": {
+        "nl": "ICT Architecture HackLab",
+        "en": "ICT Architecture HackLab"
+      },
+      "desc": {
+        "nl": "Architecturaal ontwerp van een schaalbaar cybersecurity leerplatform (TryHackMe-stijl) op basis van microservices, Docker Swarm en geïsoleerde sandbox-containers, gevalideerd via ADR's en Proof-of-Concepts.",
+        "en": "Architectural design of a scalable cybersecurity learning platform based on microservices, Docker Swarm, and isolated sandbox containers, validated through ADRs and Proof-of-Concepts."
+      },
+      "file": ""
+    },
+    {
+      "id": "39b33800-502e-4d19-b388-bb5185b0bc4d",
+      "order": 5,
+      "title": {
+        "nl": "Blue Team Security SOC",
+        "en": "Blue Team Security SOC"
+      },
+      "desc": {
+        "nl": "Hands-on SOC-project met kwetsbaarheidsscanning (OpenVAS), incidentanalyse en security baseline-opstelling op basis van OWASP/CWE-standaarden. ",
+        "en": "Hands-on SOC project covering vulnerability scanning (OpenVAS), incident analysis, and security baseline assessment aligned with OWASP/CWE standards."
+      },
+      "file": ""
     }
   ]
 }
