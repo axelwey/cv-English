@@ -42,9 +42,11 @@ export default function OverPage() {
             <div key={project.id} className={styles.projectCard}>
               <h3>{project.title[language]}</h3>
               <p>{project.desc[language]}</p>
-              <a href={`/projects/${project.file}`} target="_blank" rel="noopener noreferrer">
-                {t.pdfBtn}
-              </a>
+              {project.file && (
+                <a href={`/projects/${project.file}`} target="_blank" rel="noopener noreferrer">
+                  {t.pdfBtn}
+                </a>
+              )}
             </div>
           ))}
         </div>
