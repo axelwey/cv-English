@@ -1,6 +1,6 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
 import { useCookieConsent } from "../context/CookieConsentContext";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -8,26 +8,28 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 export default function GoogleAnalytics() {
   const { consent } = useCookieConsent();
 
-  if (consent !== "accepted" && consent !== "analytics") return null;
-  if (!GA_ID) return null;
+  useEffect(() => {
+    if (consent !== "accepted" && consent !== "analytics") return;
+    if (!GA_ID) return;
+    if (document.getElementById("ga-script")) return;
 
-  return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}', {
-            anonymize_ip: true,
-            cookie_flags: 'SameSite=Lax;Secure'
-          });
-        `}
-      </Script>
-    </>
-  );
+    const script = document.createElement("script");
+    script.id = "ga-script";
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
+    };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, {
+      anonymize_ip: true,
+      cookie_flags: "SameSite=Lax;Secure",
+    });
+  }, [consent]);
+
+  return null;
 }
