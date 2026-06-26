@@ -37,19 +37,13 @@ const translations = {
 };
 
 const CookieIcon = () => (
-  <svg
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true"
-  >
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <circle cx="12" cy="12" r="10" stroke="#d6c48f" strokeWidth="1.5" />
-    <circle cx="8" cy="9" r="1.5" fill="#d6c48f" />
-    <circle cx="15" cy="8" r="1" fill="#d6c48f" />
+    <circle cx="8"  cy="9"  r="1.5" fill="#d6c48f" />
+    <circle cx="15" cy="8"  r="1"   fill="#d6c48f" />
     <circle cx="14" cy="15" r="1.5" fill="#d6c48f" />
-    <circle cx="9" cy="15" r="1" fill="#d6c48f" />
-    <circle cx="17" cy="13" r="1" fill="#d6c48f" />
+    <circle cx="9"  cy="15" r="1"   fill="#d6c48f" />
+    <circle cx="17" cy="13" r="1"   fill="#d6c48f" />
   </svg>
 );
 
@@ -63,89 +57,100 @@ export default function CookieBanner() {
 
   const t = translations[language];
 
-  const handleSave = () => {
-    setConsent(analyticsEnabled ? "analytics" : "rejected");
-  };
+  const handleSave = () => setConsent(analyticsEnabled ? "analytics" : "rejected");
 
   return (
     <>
       <div className={styles.overlay} />
       <div className={styles.wrapper}>
-        {showSettings && (
-          <div className={styles.settingsPanel}>
-            <p className={styles.settingsTitle}>{t.settingsTitle}</p>
+        <div className={styles.card}>
+          {showSettings ? (
+            <>
+              <p className={styles.settingsTitle}>{t.settingsTitle}</p>
 
-            <div className={styles.category}>
-              <div className={styles.categoryInfo}>
-                <span className={styles.categoryLabel}>{t.necessary}</span>
-                <span className={styles.categoryDesc}>{t.necessaryDesc}</span>
+              <div className={styles.category}>
+                <div className={styles.categoryInfo}>
+                  <span className={styles.categoryLabel}>{t.necessary}</span>
+                  <span className={styles.categoryDesc}>{t.necessaryDesc}</span>
+                </div>
+                <button
+                  role="switch"
+                  aria-checked="true"
+                  disabled
+                  className={`${styles.toggle} ${styles.toggleOn} ${styles.toggleDisabled}`}
+                >
+                  <span className={`${styles.toggleCircle} ${styles.toggleCircleOn}`} />
+                </button>
               </div>
-              <button
-                role="switch"
-                aria-checked="true"
-                disabled
-                className={`${styles.toggle} ${styles.toggleOn} ${styles.toggleDisabled}`}
-              >
-                <span className={`${styles.toggleCircle} ${styles.toggleCircleOn}`} />
-              </button>
-            </div>
 
-            <div className={styles.category}>
-              <div className={styles.categoryInfo}>
-                <span className={styles.categoryLabel}>{t.analytics}</span>
-                <span className={styles.categoryDesc}>{t.analyticsDesc}</span>
+              <div className={styles.category}>
+                <div className={styles.categoryInfo}>
+                  <span className={styles.categoryLabel}>{t.analytics}</span>
+                  <span className={styles.categoryDesc}>{t.analyticsDesc}</span>
+                </div>
+                <button
+                  role="switch"
+                  aria-checked={analyticsEnabled}
+                  onClick={() => setAnalyticsEnabled((v) => !v)}
+                  className={`${styles.toggle} ${analyticsEnabled ? styles.toggleOn : styles.toggleOff}`}
+                >
+                  <span
+                    className={`${styles.toggleCircle} ${
+                      analyticsEnabled ? styles.toggleCircleOn : styles.toggleCircleOff
+                    }`}
+                  />
+                </button>
               </div>
-              <button
-                role="switch"
-                aria-checked={analyticsEnabled}
-                onClick={() => setAnalyticsEnabled((v) => !v)}
-                className={`${styles.toggle} ${analyticsEnabled ? styles.toggleOn : styles.toggleOff}`}
-              >
-                <span
-                  className={`${styles.toggleCircle} ${
-                    analyticsEnabled ? styles.toggleCircleOn : styles.toggleCircleOff
-                  }`}
-                />
-              </button>
-            </div>
 
-            <div className={styles.saveRow}>
-              <button className={styles.btnAccept} onClick={handleSave}>
-                {t.save}
-              </button>
-            </div>
-          </div>
-        )}
+              <div className={styles.divider} />
 
-        <div className={styles.banner}>
-          <div className={styles.content}>
-            <div className={styles.titleRow}>
-              <CookieIcon />
-              <span className={styles.title}>{t.title}</span>
-            </div>
-            <p className={styles.description}>{t.description}</p>
-          </div>
+              <div className={styles.actions}>
+                <button
+                  className={styles.btnReject}
+                  onClick={() => setShowSettings(false)}
+                >
+                  ← {t.settings}
+                </button>
+                <div className={styles.actionsRight}>
+                  <button className={styles.btnAccept} onClick={handleSave}>
+                    {t.save}
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className={styles.header}>
+                <CookieIcon />
+                <span className={styles.title}>{t.title}</span>
+              </div>
 
-          <div className={styles.buttons}>
-            <button
-              className={styles.btnReject}
-              onClick={() => setConsent("rejected")}
-            >
-              {t.reject}
-            </button>
-            <button
-              className={styles.btnSettings}
-              onClick={() => setShowSettings((v) => !v)}
-            >
-              {t.settings}
-            </button>
-            <button
-              className={styles.btnAccept}
-              onClick={() => setConsent("accepted")}
-            >
-              {t.accept}
-            </button>
-          </div>
+              <p className={styles.description}>{t.description}</p>
+
+              <div className={styles.actions}>
+                <button
+                  className={styles.btnReject}
+                  onClick={() => setConsent("rejected")}
+                >
+                  {t.reject}
+                </button>
+                <div className={styles.actionsRight}>
+                  <button
+                    className={styles.btnSettings}
+                    onClick={() => setShowSettings(true)}
+                  >
+                    {t.settings}
+                  </button>
+                  <button
+                    className={styles.btnAccept}
+                    onClick={() => setConsent("accepted")}
+                  >
+                    {t.accept}
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
