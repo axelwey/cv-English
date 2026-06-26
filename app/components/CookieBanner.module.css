@@ -1,0 +1,213 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-family: Inter, system-ui, sans-serif;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Main banner ── */
+.banner {
+  background: rgba(8, 16, 32, 0.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(214, 196, 143, 0.15);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f5f0e6;
+}
+
+.description {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Buttons ── */
+.buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.btnReject {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+.btnSettings {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(214, 196, 143, 0.25);
+  color: rgba(245, 240, 230, 0.7);
+  white-space: nowrap;
+}
+
+.btnAccept {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  background: #f5f0e6;
+  border: none;
+  color: #050b18;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Settings panel ── */
+.settingsPanel {
+  background: rgba(8, 16, 32, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(214, 196, 143, 0.15);
+  padding: 20px;
+}
+
+.settingsTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f5f0e6;
+  margin: 0 0 16px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.categoryInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.categoryLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(245, 240, 230, 0.9);
+  display: block;
+}
+
+.categoryDesc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  display: block;
+  margin-top: 2px;
+}
+
+.saveRow {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Toggle ── */
+.toggle {
+  position: relative;
+  width: 32px;
+  height: 18px;
+  border-radius: 9px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.toggleOn {
+  background: rgba(214, 196, 143, 0.5);
+}
+
+.toggleOff {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.toggleDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggleCircle {
+  position: absolute;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: left 0.2s ease, background 0.2s ease;
+}
+
+.toggleCircleOn {
+  left: 16px;
+  background: #f5f0e6;
+}
+
+.toggleCircleOff {
+  left: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .banner {
+    flex-wrap: wrap;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
